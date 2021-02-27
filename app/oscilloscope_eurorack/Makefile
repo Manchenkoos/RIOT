@@ -7,8 +7,13 @@ BOARD ?= stm32f4discovery
 # This has to be the absolute path to the RIOT base directory:
 RIOTBASE ?= $(CURDIR)/../..
 
+FEATURES_REQUIRED = periph_adc
+# FEATURES_REQUIRED = periph_dma
+
 USEMODULE += ili9341
 USEMODULE += xtimer
+USEMODULE += periph_adc
+# USEMODULE += periph_dma
 
 # Check if being configured via Kconfig
 ifndef CONFIG_KCONFIG_USEMODULE_ILI9341
